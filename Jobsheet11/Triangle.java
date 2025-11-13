@@ -8,10 +8,10 @@ public class Triangle {
         
         System.out.print("Enter the value of N:");
         int n = scan.nextInt();
-        int i = 1;
+        int i = 0;
 
-        while (i <= n) {
-            int j = 1;
+        while (i < n) {
+            int j = 0;
             while (j <= i) {
                 System.out.print("*");
                 j++;

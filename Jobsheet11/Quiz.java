@@ -18,8 +18,17 @@ public class Quiz {
                 int answer = scan.nextInt();
                 scan.nextLine();
                 success = (answer == number);
+
+                if (answer < number) {
+                    System.out.println("Your guess is too low!");
+                } else if (answer > number) {
+                    System.out.println("Your guess is too high!");
+                } else {
+                    System.out.println("Congratulations! You guessed the number: " + number);
+                    success = true;
+                }
+
             } while (!success);
-            System.out.println("Congratulations! You guessed the number: " + number);
             System.out.print("Do you want to play again? (y/n):");
             menu = scan.next().charAt(0);
             scan.nextLine();
