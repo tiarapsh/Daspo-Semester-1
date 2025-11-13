@@ -18,7 +18,10 @@ public class NumericTriangle {
             break;
         }
 
-        for (int i = 1; i <= N; i++) {
+         for (int i = 1; i <= N; i++) {
+            for (int s = i; s < N; s++) {
+                System.out.print(" ");
+            }
             for (int j = 1; j <= i; j++) {
                 System.out.print(j);
             }
