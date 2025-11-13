@@ -7,7 +7,6 @@ public class SquarePattern {
         Scanner input = new Scanner(System.in);
         int N;
 
-        // Ulangi input sampai N >= 3
         while (true) {
             System.out.print("Enter N (minimum 3): ");
             N = input.nextInt();
