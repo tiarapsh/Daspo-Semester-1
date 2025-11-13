@@ -1,12 +1,10 @@
-package Exercises;
+package Jobsheet11;
 
 import java.util.Scanner;
 
-public class Loop4 {
-    public static void main(String[] args) {
-        
-        Scanner input = new Scanner(System.in);
-
+public class SumLoop {
+        public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
 
         for (int i = 1; i <= 5; i++) {
             int sum = 0;
@@ -17,6 +15,6 @@ public class Loop4 {
 
             System.out.println("n = " + i + " => sum of squares = " + sum);
         }
-        input.close();
+        scan.close();
     }
 }
