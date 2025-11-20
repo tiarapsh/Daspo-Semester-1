@@ -1,17 +1,34 @@
 package Jobsheet9;
 
+import java.util.Scanner;
+
 public class linearSearch22 {
     public static void main(String[] args) {
-        int [] arrayInt = {34, 18, 26, 48, 72, 20, 56, 63};
-        int key = 20;
-        int result = 0;
+        Scanner scan = new Scanner(System.in);
+        int key = 0;
+        int result = -1;
 
-        for( int i = 0; i < arrayInt.length; i++ ) {
-            if ( arrayInt[i] == key ) {
+        System.out.print("Enter the number of array elements: ");
+        int arrayElements = scan.nextInt();
+        int[] elements = new int[arrayElements];
+
+        for (int i = 0; i < elements.length; i++) {
+            System.out.print("Enter the array element " + i + ":");
+            elements[i] = scan.nextInt();
+        }
+        System.out.print("Enter the key you want to search for:");
+        key = scan.nextInt();
+
+        for (int i = 0; i < elements.length; i++) {
+            if (elements[i] == key) {
                 result = i;
                 break;
             }
         }
-        System.out.println("The key in array is located at index position: " + result);
+        if (result == -1) {
+            System.out.println("Key not found");
+        } else {
+            System.out.println("The key is located at index: " + result);
+        }
     }
 }
