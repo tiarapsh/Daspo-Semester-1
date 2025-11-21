@@ -24,7 +24,10 @@ public class CinemaWithScanner22 {
                 System.out.print("Enter column number:");
                 int column = scan.nextInt();
                 scan.nextLine();
-
+                if (audience[row - 1][column - 1] != null) {
+                    System.out.println("Seat already taken! Please choose another seat.");
+                    continue;
+                }
                 audience[row - 1][column - 1] = name;
                 System.out.println("Audience Added!");
 
